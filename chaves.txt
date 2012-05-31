@@ -1,0 +1,3 @@
+VejaGolWS.Authentication.0p9o8i7u=xI7B+3va7ghx+PSI6qqISet5Vb2Wi2yxqZTg4kcnE/V9OpUnyVm2Rg==
+
+http://vejagol.com/VejaGolWS/services/VejaGolWS/getListaJogos?de=0&ate=15&ordem=data&filtros=&ascending=false&chave=xI7B+3va7ghx+PSI6qqISet5Vb2Wi2yxqZTg4kcnE/V9OpUnyVm2Rg==
