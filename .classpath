@@ -9,5 +9,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/VejaGolCollector/lib/servlet-api.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/VejaGolCollector"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
