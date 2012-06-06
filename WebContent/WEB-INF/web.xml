@@ -47,4 +47,14 @@
     <servlet-name>ListarJogosServlet</servlet-name>
     <url-pattern>/ListarJogosServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Servlet pra fazer a busca em qualquer campo</description>
+    <display-name>ProcurarJogosServlet</display-name>
+    <servlet-name>ProcurarJogosServlet</servlet-name>
+    <servlet-class>com.vejagol.servlet.ProcurarJogosServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcurarJogosServlet</servlet-name>
+    <url-pattern>/ProcurarJogosServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
