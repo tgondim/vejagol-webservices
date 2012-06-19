@@ -48,13 +48,13 @@
     <url-pattern>/ListarJogosServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description>Servlet pra fazer a busca em qualquer campo</description>
-    <display-name>ProcurarJogosServlet</display-name>
-    <servlet-name>ProcurarJogosServlet</servlet-name>
-    <servlet-class>com.vejagol.servlet.ProcurarJogosServlet</servlet-class>
+    <description>Servlet pra fazer a busca nos campos data, time_casa, time_visitante, campeonato e liga</description>
+    <display-name>BuscarJogosServlet</display-name>
+    <servlet-name>BuscarJogosServlet</servlet-name>
+    <servlet-class>com.vejagol.servlet.BuscarJogosServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ProcurarJogosServlet</servlet-name>
-    <url-pattern>/ProcurarJogosServlet</url-pattern>
+    <servlet-name>BuscarJogosServlet</servlet-name>
+    <url-pattern>/BuscarJogosServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,9 +13,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import com.vejagol.controller.CadastroJogo;
 import com.vejagol.model.Jogo;
+import com.vejagol.util.StringUtils;
 
 /**
- * Servlet implementation class getListaJogos
+ * Servlet implementation class ListarJogosServlet
  */
 @WebServlet("/ListarJogosServlet")
 public class ListarJogosServlet extends HttpServlet {
@@ -46,6 +47,7 @@ public class ListarJogosServlet extends HttpServlet {
 		String ordem = "data";
 		String filtros = "";
 		boolean ascending = true;
+		boolean escapeHTML = false;
 		
 		if (request.getParameter("de") != null) {
 			de = new Integer(request.getParameter("de"));
@@ -62,6 +64,9 @@ public class ListarJogosServlet extends HttpServlet {
 		if (request.getParameter("ascending") != null) {
 			ascending = new Boolean(request.getParameter("ascending"));
 		}
+		if (request.getParameter("escapeHTML") != null) {
+			escapeHTML = new Boolean(request.getParameter("escapeHTML"));
+		}
 		ArrayList<Jogo> listaJogos = cadastroJogo.listarJogos(de, 
 				ate, 
 				ordem, 
@@ -72,6 +77,12 @@ public class ListarJogosServlet extends HttpServlet {
 		JsonArray jsonListaJogos = new JsonArray();
 		
 		for (Jogo j : listaJogos) {
+			if (escapeHTML) {
+				j.setCampeonato(StringUtils.escapeHTML(j.getCampeonato()));
+				j.setLiga(StringUtils.escapeHTML(j.getLiga()));
+				j.setTimeCasa(StringUtils.escapeHTML(j.getTimeCasa()));
+				j.setTimeVisitante(StringUtils.escapeHTML(j.getTimeVisitante()));
+			}
 			jsonListaJogos.add(jsonParser.parse(j.getJSONObject()));
 		}
 		
